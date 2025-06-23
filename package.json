@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://TULSIRAKHOLIYA077.github.io/pos-project",
+  "homapage": "https://TULSIRAKHOLIYA077.github.io/pso-project",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
