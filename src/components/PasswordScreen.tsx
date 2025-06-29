@@ -148,13 +148,13 @@ const PasswordScreen = ()=>{
         <div className="w-[100%] h-[100%]  bg-[linear-gradient(to_bottom,rgba(0,0,0,0.7)_60%,#1c398e_100%)] absolute z-10"></div>
         <div className="absolute z-20 top-20 lg:top-28 w-1/2 flex justify-center items-center gap-5">
             <img className="rounded-full w-[22%] lg:w-[15%]" src={logo} alt="" />
-            <h1 className="text-2xl  xl:text-5xl text-gray-300">AdvEntPOS 8.0</h1>
+            <h1 className="text-2xl lg:text-3xl xl:text-4xl   text-gray-300">AdvEntPOS 8.0</h1>
           </div>
         <div className="absolute z-20 top-72 w-1/2 flex justify-center items-center gap-5">
-          <img className="rounded-full w-[20%] lg:w-[10%]" src={symbol} alt="" />
-          <h1 className="text-xl lg:text-3xl text-gray-200 sm:text-amber-500 md:text-blue-600 lg:text-emerald-600 xl:text-fuchsia-800">SOFTWARE</h1>
+          <img className="rounded-full w-[20%] " src={symbol} alt="" />
+          <h1 className="text-xl lg:text-2xl xl:text-3xl text-gray-200 sm:text-amber-500 md:text-blue-600 lg:text-emerald-600 xl:text-fuchsia-800">SOFTWARE</h1>
         </div>
-        <div className="absolute z-20 bottom-11 lg:bottom-10  p-5 w-3/7 xl:w-1/7 flex justify-center text-center rounded-full bg-amber-600 font-serif font-bold">
+        <div className="absolute z-20 bottom-11 lg:bottom-10  p-5 w-3/7 md:w-2/7 xl:w-2/7 flex justify-center text-center rounded-full bg-amber-600 font-serif font-bold">
         A Point-Of-Sale Software With Built-in
         </div>
 

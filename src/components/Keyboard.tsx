@@ -31,40 +31,41 @@ const Keyboard = () => {
   };
 
   return (
-    <div className="absolute z-30 top-[25%] left-[29%]  flex flex-col items-center p-4 space-y-4 bg-gray-100 justify-center w-[42%]">
+    <div className="absolute z-30 top-[50%] sm:left-1/12 md:left-1/5 lg:top-[25%] lg:left-1/2 lg:transform lg:-translate-x-1/2  flex flex-col items-center p-4 space-y-4 bg-gray-100 justify-center sm:w-[80%] md:w-[60%] lg:w-[600px]">
       <div className="text-xl font-semibold mb-4">Password</div>
 
       <div className="w-full max-w-md p-3 bg-white shadow rounded-xl text-xl text-gray-700">
-        {input || <span className="text-gray-400">Enter Text</span>}
+        {/* {input || <span className="text-gray-400">Enter Text</span>} */}
+        {input.trim() ? input : <span className="text-gray-400">Enter Text</span>}
       </div>
 
-      <div className="flex flex-wrap gap-0.5">
+      <div className="flex flex-wrap justify-center gap-0.5">
         {numbers.map((ele)=>(
-          <button onClick={() => handleKeyClick(ele)} className="text-black font-bold w-10 py-1 rounded-xl shadow bg-[linear-gradient(to_bottom,#dbeafe,#155dfc)]" key={ele}>{ele}</button>
+          <button onClick={() => handleKeyClick(ele)} className="text-black font-bold w-7 lg:w-10 py-0 lg:py-1 rounded-xl shadow bg-[linear-gradient(to_bottom,#dbeafe,#155dfc)]" key={ele}>{ele}</button>
         ))}
 
-        <button onClick={handleBackspace} className="text-black font-bold px-4 py-2 rounded-xl shadow bg-[linear-gradient(to_bottom,#fce7f3,#db2777)]">BackSpace</button>
+        <button onClick={handleBackspace} className="text-black font-bold px-2 lg:px-4 py-2 rounded-xl shadow bg-[linear-gradient(to_bottom,#fce7f3,#db2777)]">BackSpace</button>
 
-        <div className="flex gap-0.5 w-full"> 
-          <div className="w-[82%] flex justify-center flex-wrap gap-0.5">
+        <div className="flex gap-0.5 w-[430px] lg:w-full"> 
+          <div className="w-[80%] lg:w-[82%] flex justify-center flex-wrap gap-0.5">
             {(capsOn ? keysQ : keysq).map((key) => (
                 <button
                   key={key}
                   onClick={() => handleKeyClick(key)}
-                  className="text-black w-10 py-2 rounded-xl shadow bg-[linear-gradient(to_bottom,#fce7f3,#6a7282)] font-bold"
+                  className="text-black w-8 lg:w-10 py-2 rounded-xl shadow bg-[linear-gradient(to_bottom,#fce7f3,#6a7282)] font-bold"
                 >
                   {key}
                 </button>
             ))}
 
-            <button className="bg-[linear-gradient(to_bottom,#fef08a,#f59e0b)] text-black font-bold py-1 rounded-xl shadow text-sm w-12" 
+            <button className="bg-[linear-gradient(to_bottom,#fef08a,#f59e0b)] text-black lg:font-bold py-1 rounded-xl shadow text-sm w-12" 
             onClick={()=>dispatch(toggleCaps())}>Caps Lock</button>
 
             {(capsOn ? keysA : keysa).map((key) => (
                 <button
                   key={key}
                   onClick={() => handleKeyClick(key)}
-                  className="text-black font-bold py-1 rounded-xl w-10 shadow bg-[linear-gradient(to_bottom,#fce7f3,#6a7282)]"
+                  className="text-black font-bold py-1 rounded-xl w-7 lg:w-10 shadow bg-[linear-gradient(to_bottom,#fce7f3,#6a7282)]"
                 >
                   {key} 
                 </button>
@@ -73,13 +74,13 @@ const Keyboard = () => {
                 <button
                   key={key}
                   onClick={() => handleKeyClick(key)}
-                  className="bg-[linear-gradient(to_bottom,#fce7f3,#6a7282)] text-black font-bold px-4 py-2 rounded-xl shadow"
+                  className="bg-[linear-gradient(to_bottom,#fce7f3,#6a7282)] text-black font-bold px-2.5 lg:px-4 py-2 rounded-xl shadow"
                 >
                   {key}
                 </button>
             ))}
         </div> 
-        <div className="text-black font-bold rounded-xl w-[17%] shadow text-2xl flex justify-center items-center bg-[linear-gradient(to_bottom,#cffafe,#06b6d4)]" onClick={()=>{
+        <div className="text-black font-bold rounded-xl w-[10%] lg:w-[17%] shadow text-2xl flex justify-center items-center bg-[linear-gradient(to_bottom,#cffafe,#06b6d4)]" onClick={()=>{
               dispatch(setInputFromKeyboard(input));
               dispatch(setShowKeyboard());
               dispatch(clearInput());
@@ -89,7 +90,7 @@ const Keyboard = () => {
 
         <div className="flex gap-1">
           {keys.map((ele)=>(
-            <button onClick={() => handleKeyClick(ele)} className="bg-[linear-gradient(to_bottom,#ffedd5,#fb923c)] text-black font-bold px-4 py-2 rounded-xl shadow w-11" key={ele}>{ele}</button>
+            <button onClick={() => handleKeyClick(ele)} className="bg-[linear-gradient(to_bottom,#ffedd5,#fb923c)] text-black font-bold px-4 py-2 rounded-xl shadow w-7 lg:w-11" key={ele}>{ele}</button>
           ))}
         </div>
 
@@ -100,7 +101,7 @@ const Keyboard = () => {
             Clear
           </button>
 
-          <button className="text-white px-6 py-2 rounded-xl shadow w-80 bg-[linear-gradient(to_bottom,#cffafe,#06b6d4)]" onClick={()=>dispatch(addSpace())}></button>
+          <button className="text-white px-6 py-2 rounded-xl shadow w-44 lg:w-80 bg-[linear-gradient(to_bottom,#cffafe,#06b6d4)]" onClick={()=>dispatch(addSpace())}></button>
 
           <button className="text-black font-bold px-6 py-2 rounded-xl shadow bg-[linear-gradient(to_bottom,#fce7f3,#db2777)]" 
             onClick={()=>{
