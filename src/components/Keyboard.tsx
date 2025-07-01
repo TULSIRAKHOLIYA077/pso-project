@@ -46,8 +46,8 @@ const Keyboard = () => {
 
         <button onClick={handleBackspace} className="text-black font-bold px-2 lg:px-4 py-2 rounded-xl shadow bg-[linear-gradient(to_bottom,#fce7f3,#db2777)]">BackSpace</button>
 
-        <div className="flex gap-0.5 w-[430px] lg:w-full"> 
-          <div className="w-[80%] lg:w-[82%] flex justify-center flex-wrap gap-0.5">
+        <div className="flex gap-0.5 justify-center w-[430px] lg:w-full"> 
+          <div className="w-[80%] lg:w-[78%] flex justify-center flex-wrap gap-0.5">
             {(capsOn ? keysQ : keysq).map((key) => (
                 <button
                   key={key}
